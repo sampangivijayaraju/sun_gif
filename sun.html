@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun</title>
+    <style>
+        .container{
+             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(243, 4, 4);
+        }
+        .container>.class1{
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(240, 83, 10);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            z-index: 100;
+        }
+        .container>.class2{
+            position: absolute; 
+            background-color: gold;
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            animation-name: anime;
+            animation-duration: 6s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+  @keyframes anime {
+  0% {
+    transform: translateX(-40px) scale(1);
+    filter: brightness(10);
+  }
+   100% {
+    transform: translateX(50px) scale(1);
+    filter: brightness(10);
+  } 
+} 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="class1"></div>
+        <div class="class2"></div>
+    </div>
+</body>
+</html>
